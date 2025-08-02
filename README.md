@@ -31,7 +31,7 @@ python3 generate-jwks.py --subject=user --issuer=localhost --audience=developmen
 This will create the `public.jwks` file (which is mounted as a volume in the docker-compose file) and display your JWT to use in the `Authentication` HTTP Header.
 
 - **Configuration**:
-  Update the `nginx.conf` file with your proxy settings.
+  Rename the `nginx.conf.example` file to `nginx.conf` and update it with your proxy settings.
 
 - **Docker**:
   Then `docker-compose-up` to start your containers.
