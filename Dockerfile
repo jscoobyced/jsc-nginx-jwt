@@ -43,4 +43,6 @@ RUN apk --no-cache add jansson nginx
 
 COPY --from=builder /usr/lib/nginx/modules/ngx_http_auth_jwt_module.so /usr/lib/nginx/modules/ngx_http_auth_jwt_module.so
 COPY --from=builder /etc/nginx/modules/auth_jwt.conf /etc/nginx/modules/auth_jwt.conf
+RUN echo "include /etc/nginx/conf.d/*.conf;" > /etc/nginx/nginx.conf
+
 CMD [ "nginx"]
