@@ -1,0 +1,9 @@
+services:
+  nginx:
+    image: jscdroiddev/jsc-nginx-jwt:0.0.1
+    ports:
+      - "8888:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./public.jwks:/etc/nginx/public.jwks
+    container_name: nginx
